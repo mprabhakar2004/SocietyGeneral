@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>codingassignment</groupId>
-    <artifactId>com.sg.coding assignment</artifactId>
+    <artifactId>com.sg.codingassignment</artifactId>
     <version>1.0-SNAPSHOT</version>
     <build>
         <plugins>
