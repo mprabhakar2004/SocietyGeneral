@@ -1,6 +1,8 @@
 # SocietyGeneral
 Assignment
 
+NOTE : Assumption is user will be giving valid input, due to time constraints input validation is not done.
+
 Instruction to run:
 
 1. Checkout the git branch
