@@ -8,7 +8,7 @@ public class ApparelFactory {
         return ApparelType.fromString(type).getApparel();
     }
 
-    public static BaseApparel applyApparelType(BaseApparel apparel, String apparelType){
+    public static BaseApparel applyApparelType(BaseApparel apparel, String apparelType) {
         try {
             return (BaseApparel) ApparelType.fromString(apparelType).getClassz().getDeclaredConstructor(BaseApparel.class).newInstance(apparel);
         } catch (NoSuchMethodException e) {
@@ -23,7 +23,7 @@ public class ApparelFactory {
         return null;
     }
 
-    public static BaseApparel applyBrand(BaseApparel apparel, String brandType){
+    public static BaseApparel applyBrand(BaseApparel apparel, String brandType) {
         try {
             return (BaseApparel) BrandType.fromString(brandType).getClassz().getDeclaredConstructor(BaseApparel.class).newInstance(apparel);
         } catch (NoSuchMethodException e) {

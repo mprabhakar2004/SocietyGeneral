@@ -10,8 +10,8 @@ public class DiscountMapper {
 
     public static void load() throws IOException {
         ClassLoader classLoader = DiscountMapper.class.getClassLoader();
-        FileReader reader=new FileReader(classLoader.getResource("discountmapper.properties").getFile());
-        properties=new Properties();
+        FileReader reader = new FileReader(classLoader.getResource("discountmapper.properties").getFile());
+        properties = new Properties();
         try {
             properties.load(reader);
         } catch (IOException e) {
@@ -21,7 +21,7 @@ public class DiscountMapper {
 
     }
 
-    public static int getDiscount(String key){
+    public static int getDiscount(String key) {
         int discount = 0;
         if (properties.containsKey(key))
             discount = Integer.parseInt(properties.getProperty(key));

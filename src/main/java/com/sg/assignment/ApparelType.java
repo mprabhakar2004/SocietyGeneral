@@ -1,12 +1,12 @@
 package com.sg.assignment;
 
 public enum ApparelType {
-    SHIRT("Shirts",ShirtApparelDecorator.class),
-    TROUSERS("Trousers",TrousersApparelDecorator.class),
-    CASUALS("Casuals",CasualsApparelDecorator.class),
-    JEANS("Jeans",JeansApparelDecorator.class),
-    DRESS("Dresses",DressApparelDecorator.class),
-    FOOTWEAR("Footwear",FootwearApparelDecorator.class);
+    SHIRT("Shirts", ShirtApparelDecorator.class),
+    TROUSERS("Trousers", TrousersApparelDecorator.class),
+    CASUALS("Casuals", CasualsApparelDecorator.class),
+    JEANS("Jeans", JeansApparelDecorator.class),
+    DRESS("Dresses", DressApparelDecorator.class),
+    FOOTWEAR("Footwear", FootwearApparelDecorator.class);
 
     public String getDisplayValue() {
         return displayValue;
@@ -19,9 +19,10 @@ public enum ApparelType {
     }
 
     private Class classz;
+
     ApparelType(String text, Class classz) {
         this.displayValue = text;
-        this.classz=classz;
+        this.classz = classz;
     }
 
     public String getText() {
@@ -37,15 +38,19 @@ public enum ApparelType {
         return null;
     }
 
-    BaseApparel getApparel(){
-        BaseApparel baseApprel =null;
-        switch(this){
+    BaseApparel getApparel() {
+        BaseApparel baseApprel = null;
+        switch (this) {
             case SHIRT:
             case TROUSERS:
             case CASUALS:
-            case JEANS: baseApprel= new MenClothing(); break;
+            case JEANS:
+                baseApprel = new MenClothing();
+                break;
             case DRESS:
-            case FOOTWEAR: baseApprel= new WomenClothing(); break;
+            case FOOTWEAR:
+                baseApprel = new WomenClothing();
+                break;
         }
         return baseApprel;
     }

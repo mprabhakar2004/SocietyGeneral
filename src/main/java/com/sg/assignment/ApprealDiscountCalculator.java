@@ -21,19 +21,19 @@ public class ApprealDiscountCalculator {
 
         double[] result = new double[testInput];
         for (int i = 0; i < testInput; i++) {
-            int j=0;
+            int j = 0;
             String[] stringArr = br.readLine().split(",");
             if (stringArr.length > 0) {
-                for ( ;j<stringArr.length; j++) {
-                    if(!ValidatorUtil.isValidInput("Id",stringArr[j], Long.class) || !validItemSelection(stringArr[j])){
+                for (; j < stringArr.length; j++) {
+                    if (!ValidatorUtil.isValidInput("Id", stringArr[j], Long.class) || !validItemSelection(stringArr[j])) {
                         i--;
                         break;
                     }
                 }
-                if(j!= stringArr.length) {
+                if (j != stringArr.length) {
                     continue;
                 }
-            }else {
+            } else {
                 i--;
             }
             result[i] = calculateTotalDiscountedPriceForItems(stringArr);
@@ -47,7 +47,7 @@ public class ApprealDiscountCalculator {
 
     private static boolean validItemSelection(String input) {
 
-        if (ValidatorUtil.isValidInput("Id",input, Long.class)) {
+        if (ValidatorUtil.isValidInput("Id", input, Long.class)) {
             if (!productMap.containsKey(input)) {
                 System.out.println("Invalid product Id :" + input);
                 return false;
@@ -83,7 +83,7 @@ public class ApprealDiscountCalculator {
     private static void createInventory() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int inventoryCount = 0;
-        while (inventoryCount==0) {
+        while (inventoryCount == 0) {
             try {
                 inventoryCount = Integer.parseInt(br.readLine());
             } catch (Exception ex) {
@@ -107,10 +107,9 @@ public class ApprealDiscountCalculator {
     }
 
     private static boolean validInput(String[] inputStrArr) {
-        return ValidatorUtil.isValidInput("Product Id", inputStrArr[0].trim(), Long.class) &&
+        return inputStrArr.length == 4 && ValidatorUtil.isValidInput("Product Id", inputStrArr[0].trim(), Long.class) &&
                 ValidatorUtil.isValidInput("Brand Type", inputStrArr[1].trim(), BrandType.class) &&
                 ValidatorUtil.isValidInput("Apparel Type", inputStrArr[2].trim(), ApparelType.class) &&
                 ValidatorUtil.isValidInput("Price", inputStrArr[3].trim(), Double.class);
-
     }
 }
