@@ -9,7 +9,7 @@ e.g. git clone  https://github.com/mprabhakar2004/SocietyGeneral.git
 2. Import this it in intellij(any ide) as new project
 3. Run ApprealDiscountCalculator.java using IDE or we can use 
     ( mvn exec:java  -Dexec.mainClass=com.sg.assignment.ApprealDiscountCalculator   also to execute)
-4. Innput first line as no. of inventory items
+4. Input first line as no. of inventory items
 5. Input inventory items
 6. Input no. of test input
 7. Input product ids as comma separated list
