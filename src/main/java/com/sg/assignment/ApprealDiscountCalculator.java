@@ -1,10 +1,9 @@
 package com.sg.assignment;
 
-import javax.sound.midi.Soundbank;
-import java.io.*;
-import java.util.Arrays;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class ApprealDiscountCalculator {
@@ -34,6 +33,7 @@ public class ApprealDiscountCalculator {
 
     /**
      * Helper method to to calculate final amount
+     *
      * @param productIds
      * @return
      */
@@ -52,6 +52,7 @@ public class ApprealDiscountCalculator {
 
     /**
      * Helper method to create inventory
+     *
      * @throws IOException
      */
     private static void createInventory() throws IOException {

@@ -1,7 +1,5 @@
 package com.sg.assignment;
 
-import java.lang.reflect.InvocationTargetException;
-
 public enum ApparelType {
     SHIRT("Shirts",ShirtApparelDecorator.class),
     TROUSERS("Trousers",TrousersApparelDecorator.class),
