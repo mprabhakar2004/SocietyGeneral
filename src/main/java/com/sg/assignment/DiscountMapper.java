@@ -16,6 +16,7 @@ public class DiscountMapper {
             properties.load(reader);
         } catch (IOException e) {
             e.printStackTrace();
+            System.exit(-1);
         }
 
     }
